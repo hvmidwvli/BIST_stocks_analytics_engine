@@ -1,0 +1,1 @@
+These are the raw historical data CSV files of the individual stocks, which were downloaded from `Investing.com` individually.

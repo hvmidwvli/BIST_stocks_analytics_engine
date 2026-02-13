@@ -1,0 +1,1 @@
+This query was created once in the beginning and then replicated for all 5 stock sectors.
