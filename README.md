@@ -11,16 +11,16 @@ To ensure strict temporal consistency, the analysis utilizes a September 30 (Q3)
 Because some stocks are newer than others, the data depth varies by industry:
 
 * **Banking:** 15 Years (2010–2025)
-* **Industrials:** ~12 Years (2013–2025)
-* **Airlines & Transportation:** ~10 Years (2015–2025)
-* **Consumer & Retail:** ~10 Years (2015–2025)
-* **Technology:** ~7 Years (2018–2025)
+* **Industrials:** 12 Years (2013–2025)
+* **Airlines & Transportation:** 10 Years (2015–2025)
+* **Consumer & Retail:** 10 Years (2015–2025)
+* **Technology:** 7 Years (2018–2025)
 
-The goal was to build a system that acts like an institutional research tool—ingesting raw daily data, cleaning it through a custom pipeline, and outputting actionable risk/reward insights.
+The goal was to build a system that acts like an institutional research tool which ingests raw daily data, cleans it through a custom pipeline, and outputs actionable risk/reward insights.
 
 ## Technical Architecture
 
-I built this project using a "Fact & Dimension" approach to ensure the data model was scalable and accurate. I implemented a directory-based ETL pipeline (`Folder.Files`) that dynamically scans 5 sector folders to ingest 30 individual stock CSVs.
+This project waasa built using a "Fact & Dimension" approach to ensure the data model was scalable and accurate. A directory-based ETL pipeline (`Folder.Files`) that dynamically scans 5 sector folders to ingest 30 individual stock CSVs was implemented.
 
 ### Data Engineering (Excel & Power Query)
 
@@ -54,5 +54,4 @@ The final layer is the interactive dashboard. Since the data model was already s
 * **`data/`**: The raw data lake. Organized into 5 sector-specific sub-directories containing the 30 individual stock CSVs.
 
 ---
-
 *Designed & Engineered by Hamed Wali Fayez*
