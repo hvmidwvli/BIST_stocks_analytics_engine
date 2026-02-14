@@ -11,7 +11,7 @@ This project is built with a portable data engine. The Excel workbook uses a dyn
 
 2. Open `BIST_Analysis.xlsx`:
 
-    Go to the `data_dictionary` sheet.
+    (Optional) Unhide and go to the `Data_Dictionary` sheet.
 
     Click **Data > Refresh All**. The engine will auto-detect your folder path and update the ETL pipelines.
 
