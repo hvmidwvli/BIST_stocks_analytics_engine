@@ -1,8 +1,8 @@
-# BIST 30 Equity Analytics & Risk Engine
+# BIST Stocks Analytics & Risk Engine
 
 ## Project Overview
 
-This project is a full-stack analysis of the BIST 30 index, designed to test market behavior beyond simple price tracking. I backtested historical data from 2010 to 2025 to model risk, sector rotation, and capital flow.
+This project is a full-stack equity analysis of 30 publicly traded stocks listed on Borsa Istanbul (BIST), designed to evaluate market behavior beyond simple price tracking. Using historical daily data from 2010 to 2025 (depending on sector availability). The goal was to model risk, sector trends, and capital flow beyond simple price tracking.
 
 ## Data Scope & Standardization
 
@@ -20,11 +20,11 @@ The goal was to build a system that acts like an institutional research tool whi
 
 ## Technical Architecture
 
-This project waasa built using a "Fact & Dimension" approach to ensure the data model was scalable and accurate. A directory-based ETL pipeline (`Folder.Files`) that dynamically scans 5 sector folders to ingest 30 individual stock CSVs was implemented.
+This project was built using a "Fact & Dimension" approach to ensure the data model was scalable and accurate. A directory-based ETL pipeline (`Folder.Files`) that dynamically scans 5 sector folders to ingest 30 individual stock CSVs was implemented.
 
 ### Data Engineering (Excel & Power Query)
 
-The backend relies on a custom ETL pipeline built in Power Query (M Language). I consolidated six independent sector datasets into a unified model. Instead of manual merging, I created reusable functions to standardize date formats and handle currency localization across 80,000+ rows.
+The backend relies on a custom ETL pipeline built in Power Query (M Language). I consolidated six independent sector datasets into a unified model. Instead of manual merging, I created reusable functions to standardize date formats and handle currency localization across ~80,000 rows.
 
 Crucially, this is where I engineered the relational model. I linked the granular `Master_StockData` (Fact Table) to the `Industry_Map` (Dimension Table) directly within the Excel architecture. This pre-built relationship ensures that all downstream analysis handles sector filtering automatically without needing complex lookups later on.
 
@@ -36,6 +36,8 @@ Before visualization, I used Excel Pivot Tables to run the core statistical test
 * **Test B:** Volatility Clustering & Risk Assessment
 * **Test C:** Liquidity & Market Participation
 * **Test D:** Correlation Matrix (Diversification Check)
+
+To make the data more interactive, I added an industry slicer and a timeline to the Excel interface. These allow instant filtering across different market cycles and sectors and consequently transform the static tables into a dynamic engine for exploration.
 
 ### Business Intelligence (Power BI)
 
@@ -49,7 +51,7 @@ The final layer is the interactive dashboard. Since the data model was already s
 
 * **`BIST_Analysis.xlsx`**: The backend engine. Contains the embedded Power Query (M) logic that iterates through the `data/` directories to ingest and normalize files.
 * **`BIST_Analysis.pbix`**: The visual dashboard.
-* **`BIST_Analysis_Report.pdf`**: The executive summary.
+* **`BIST_30_Analytics_Sample_Report.pdf`**: The executive findings. 
 * **`assets/`**: Project screenshots.
 * **`data/`**: The raw data lake. Organized into 5 sector-specific sub-directories containing the 30 individual stock CSVs.
 
