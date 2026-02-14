@@ -4,6 +4,25 @@
 
 This project is a full-stack equity analysis of 30 publicly traded stocks listed on Borsa Istanbul (BIST), designed to evaluate market behavior beyond simple price tracking. Using historical daily data from 2010 to 2025 (depending on sector availability). The goal was to model risk, sector trends, and capital flow beyond simple price tracking.
 
+This project is built with a portable data engine. The Excel workbook uses a dynamic relative path to automatically detect the local directory, meaning you won’t have to manually fix file paths for the 30+ CSV files.
+
+#### How to Run the Project:
+1. Download/Clone this repository to your machine.
+
+2. Open `BIST_Analysis.xlsx`:
+
+    Go to the `data_dictionary` sheet.
+
+    Click **Data > Refresh All**. The engine will auto-detect your folder path and update the ETL pipelines.
+
+3. Open `BIST_Analysis.pbix`:
+
+    If the dashboard shows a "Data Source Error," go to **File > Options and settings > Data source settings**.
+
+    Click **Change Source** and select the `BIST_Analysis.xlsx` file in your local folder.
+
+    Click Apply Changes to see the live visualizations.
+
 ## Data Scope & Standardization
 
 To ensure strict temporal consistency, the analysis utilizes a September 30 (Q3) cut-off. Since Q4 2025 data was unavailable at the time of modeling, I standardized all historical windows to strictly align with this cycle (Q3–Q3). This ensures that every backtested period represents an exact, comparable annual interval without seasonal skew.
