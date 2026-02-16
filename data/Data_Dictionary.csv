@@ -1,8 +1,19 @@
-﻿Column Index,Header Name,Data Type,Notes
-1,Date,Date,DD/MM/YYYY format required.
-2,Price,Number/Decimal,Close price.
-3,Open,Number/Decimal,
-4,High,Number/Decimal,
-5,Low,Number/Decimal,
-6,Vol.,Text/Number,"Suffixes like ""M"" or ""K"" are handled by the cleaner."
-7,Change %,Percentage,
+﻿Column Index,Column Name,Data Format,Description,
+1,Date,Date,DD/MM/YYYY format required.,
+2,Price,Number/Decimal,Close price.,
+3,Open,Number/Decimal,,
+4,High,Number/Decimal,,
+5,Low,Number/Decimal,,
+6,Vol.,Text/Number,"Suffixes like ""M"" or ""K"" are handled by the cleaner.",
+7,Change %,Percentage,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
